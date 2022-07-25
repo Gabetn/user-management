@@ -1,24 +1,15 @@
 # README
+A repo containing an example User management API in Ruby on Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Exposes the `/api/v1/users` endpoint through localhost:3000 when ran via `rails s`. 
+- GET `/api/v1/users` - returns all users
+    - User Query Params:
+        - `first_name`
+        - `last_name`
+        - `email`
+        - `gov_id_number`
+        - `gov_id_type`
+    - Optional Param `exact` restricts results to a unique match
+- POST /api/v1/users - creates a new user
+- POST `/api/v1/users/delete` - deletes a single user if a unique match is found from the user query params.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
